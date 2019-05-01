@@ -15,6 +15,14 @@
 		534113542278898400B095A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534113522278898400B095A0 /* LaunchScreen.storyboard */; };
 		5341135F2278898400B095A0 /* WhetherInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5341135E2278898400B095A0 /* WhetherInfoTests.swift */; };
 		5341136A2278898500B095A0 /* WhetherInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534113692278898500B095A0 /* WhetherInfoUITests.swift */; };
+		5341137E22788A1900B095A0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5341137D22788A1900B095A0 /* NetworkManager.swift */; };
+		5341138022788A6300B095A0 /* JSONError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5341137F22788A6300B095A0 /* JSONError.swift */; };
+		5341138222788A8600B095A0 /* WhetherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5341138122788A8600B095A0 /* WhetherData.swift */; };
+		534113852278C4B700B095A0 /* WhetherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534113832278C4B700B095A0 /* WhetherTableViewCell.swift */; };
+		534113862278C4B700B095A0 /* WhetherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 534113842278C4B700B095A0 /* WhetherTableViewCell.xib */; };
+		534113882278C66200B095A0 /* DetailedTemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534113872278C66200B095A0 /* DetailedTemperatureViewController.swift */; };
+		5341138C227966D200B095A0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5341138B227966D100B095A0 /* CoreDataManager.swift */; };
+		5341138E22798EBA00B095A0 /* WhetherURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5341138D22798EBA00B095A0 /* WhetherURLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		534113652278898500B095A0 /* WhetherInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhetherInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		534113692278898500B095A0 /* WhetherInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhetherInfoUITests.swift; sourceTree = "<group>"; };
 		5341136B2278898500B095A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5341137D22788A1900B095A0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5341137F22788A6300B095A0 /* JSONError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONError.swift; sourceTree = "<group>"; };
+		5341138122788A8600B095A0 /* WhetherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhetherData.swift; sourceTree = "<group>"; };
+		534113832278C4B700B095A0 /* WhetherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhetherTableViewCell.swift; sourceTree = "<group>"; };
+		534113842278C4B700B095A0 /* WhetherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WhetherTableViewCell.xib; sourceTree = "<group>"; };
+		534113872278C66200B095A0 /* DetailedTemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTemperatureViewController.swift; sourceTree = "<group>"; };
+		5341138B227966D100B095A0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5341138D22798EBA00B095A0 /* WhetherURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhetherURLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +115,13 @@
 		534113452278898300B095A0 /* WhetherInfo */ = {
 			isa = PBXGroup;
 			children = (
-				534113462278898300B095A0 /* AppDelegate.swift */,
-				534113482278898300B095A0 /* ViewController.swift */,
-				5341134A2278898300B095A0 /* Main.storyboard */,
+				53411389227966B300B095A0 /* CoreData */,
+				5341137C227889D500B095A0 /* Storyboard */,
+				5341137B227889C400B095A0 /* Enum */,
+				5341137A227889B100B095A0 /* NetworkManager */,
+				53411379227889A800B095A0 /* Controller */,
+				53411378227889A100B095A0 /* View */,
+				534113772278899100B095A0 /* Model */,
 				534113502278898400B095A0 /* Assets.xcassets */,
 				534113522278898400B095A0 /* LaunchScreen.storyboard */,
 				534113552278898400B095A0 /* Info.plist */,
@@ -126,6 +146,66 @@
 				5341136B2278898500B095A0 /* Info.plist */,
 			);
 			path = WhetherInfoUITests;
+			sourceTree = "<group>";
+		};
+		534113772278899100B095A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5341138122788A8600B095A0 /* WhetherData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		53411378227889A100B095A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				534113832278C4B700B095A0 /* WhetherTableViewCell.swift */,
+				534113842278C4B700B095A0 /* WhetherTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		53411379227889A800B095A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				534113462278898300B095A0 /* AppDelegate.swift */,
+				534113482278898300B095A0 /* ViewController.swift */,
+				534113872278C66200B095A0 /* DetailedTemperatureViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5341137A227889B100B095A0 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				5341137D22788A1900B095A0 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		5341137B227889C400B095A0 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				5341137F22788A6300B095A0 /* JSONError.swift */,
+				5341138D22798EBA00B095A0 /* WhetherURLs.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		5341137C227889D500B095A0 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5341134A2278898300B095A0 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		53411389227966B300B095A0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5341138B227966D100B095A0 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +315,7 @@
 				534113542278898400B095A0 /* LaunchScreen.storyboard in Resources */,
 				534113512278898400B095A0 /* Assets.xcassets in Resources */,
 				5341134C2278898300B095A0 /* Main.storyboard in Resources */,
+				534113862278C4B700B095A0 /* WhetherTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +340,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5341138022788A6300B095A0 /* JSONError.swift in Sources */,
+				5341137E22788A1900B095A0 /* NetworkManager.swift in Sources */,
+				534113852278C4B700B095A0 /* WhetherTableViewCell.swift in Sources */,
+				5341138E22798EBA00B095A0 /* WhetherURLs.swift in Sources */,
+				534113882278C66200B095A0 /* DetailedTemperatureViewController.swift in Sources */,
 				534113492278898300B095A0 /* ViewController.swift in Sources */,
+				5341138222788A8600B095A0 /* WhetherData.swift in Sources */,
+				5341138C227966D200B095A0 /* CoreDataManager.swift in Sources */,
 				534113472278898300B095A0 /* AppDelegate.swift in Sources */,
 				5341134F2278898300B095A0 /* WhetherInfo.xcdatamodeld in Sources */,
 			);
